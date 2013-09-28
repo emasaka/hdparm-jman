@@ -1,0 +1,2256 @@
+# -*- coding: utf-8 -*-
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-09-15 16:39+0900\n"
+"PO-Revision-Date: 2013-09-27 22:38+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: original/man8/hdparm.8:1
+#, no-wrap
+msgid "HDPARM"
+msgstr "HDPARM"
+
+#. type: TH
+#: original/man8/hdparm.8:1
+#, no-wrap
+msgid "November 2012"
+msgstr "November 2012"
+
+#. type: TH
+#: original/man8/hdparm.8:1
+#, no-wrap
+msgid "Version 9.43"
+msgstr "Version 9.43"
+
+#. type: SH
+#: original/man8/hdparm.8:3
+#, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: Plain text
+#: original/man8/hdparm.8:5
+msgid "hdparm - get/set SATA/IDE device parameters"
+msgstr "hdparm - SATA/IDE デバイスのパラメータを設定・取得する"
+
+#. type: SH
+#: original/man8/hdparm.8:5
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "書式"
+
+#. type: Plain text
+#: original/man8/hdparm.8:8
+msgid "B<hdparm> [options] [device ...]"
+msgstr "B<hdparm> [options] [device ...]"
+
+#. type: SH
+#: original/man8/hdparm.8:8
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: Plain text
+#: original/man8/hdparm.8:17
+msgid ""
+"B<hdparm> provides a command line interface to various kernel interfaces "
+"supported by the Linux SATA/PATA/SAS \"libata\" subsystem and the older IDE "
+"driver subsystem.  Many newer (2008 and later)  USB drive enclosures now "
+"also support \"SAT\" (SCSI-ATA Command Translation)  and therefore may also "
+"work with hdparm.  E.g. recent WD \"Passport\" models and recent NexStar-3 "
+"enclosures.  Some options may work correctly only with the latest kernels."
+msgstr ""
+"B<hdparm> は、 Linux の SATA/PATA/SAS の \"libata\" サブシステムや"
+"それ以前の IDE ドライバサブシステムでサポートされる、 "
+"様々なカーネルインタフェースに対する、 "
+"コマンドラインインタフェースを提供する。 "
+"最近の (2008 年以降) 外付け USB ドライブの多くでは \"SAT\" "
+"(SCSI-ATA Command Translation) もサポートしているため、 hdparam "
+"が使えるかもしれない。 "
+"例えば、 最近の WD \"Passport\" モデルや、 最近の NexStar-3 である。 "
+"なお、 いくつかのオプションは、 最新のカーネルでしか正しく動作しない。 "
+
+#. type: SH
+#: original/man8/hdparm.8:17
+#, no-wrap
+msgid "OPTIONS"
+msgstr "オプション"
+
+#. type: Plain text
+#: original/man8/hdparm.8:23
+msgid ""
+"When no options are given, B<-acdgkmur> is assumed.  For \"Get/set\" "
+"options, a query without the optional parameter (e.g. -d) will query (get)  "
+"the device state, and with a parameter (e.g., -d0) will set the device "
+"state."
+msgstr ""
+"何のフラグも指定されていない場合には I<-acdgkmur> "
+"が指定されたとみなす。 "
+"取得・設定のオプションでは、 追加のパラメータが与えられなければ (-d など) "
+"デバイスの状態の問い合わせ (取得) となり、 与えられれば (-d0 など) "
+"デバイスの状態の設定となる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:23
+#, no-wrap
+msgid "I<-a>"
+msgstr "I<-a>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:31
+msgid ""
+"Get/set sector count for filesystem (software) read-ahead.  This is used to "
+"improve performance in sequential reads of large files, by prefetching "
+"additional blocks in anticipation of them being needed by the running task.  "
+"Many IDE drives also have a separate built-in read-ahead function, which "
+"augments this filesystem (software) read-ahead function."
+msgstr ""
+"ファイルシステム (ソフトウェア) の先読みセクタ数を取得・設定する。 "
+"実行中のタスクから必要となる追加のブロックを予想、 プリフェッチすることで、 "
+"大きなファイルのシーケンシャル読み出しの性能を改善するのに用いられる。 "
+"多くの IDE ドライブでは、 ファイルシステム (ソフトウェア) "
+"の先読み機能に加えて、 それとは別に内蔵の先読み機能を持っている。 "
+
+#. type: TP
+#: original/man8/hdparm.8:31
+#, no-wrap
+msgid "I<-A>"
+msgstr "I<-A>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:39
+msgid ""
+"Get/set the IDE drive\\'s read-lookahead feature (usually ON by default).  "
+"Usage: B<-A0> (disable) or B<-A1> (enable)."
+msgstr ""
+"IDE ドライブの先読み機能の無効・有効を取得・設定する (普通は ON "
+"がデフォルト)。 "
+"使い方: B<-A0> (無効にする) または B<-A1> (有効にする)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:39
+#, no-wrap
+msgid "I<-b>"
+msgstr "I<-b>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:42
+msgid "Get/set bus state."
+msgstr "バスの状態を取得・設定する。"
+
+#. type: TP
+#: original/man8/hdparm.8:42
+#, no-wrap
+msgid "I<-B>"
+msgstr "I<-B>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:52
+msgid ""
+"Get/set Advanced Power Management feature, if the drive supports it. A low "
+"value means aggressive power management and a high value means better "
+"performance.  Possible settings range from values 1 through 127 (which "
+"permit spin-down), and values 128 through 254 (which do not permit "
+"spin-down).  The highest degree of power management is attained with a "
+"setting of 1, and the highest I/O performance with a setting of 254.  A "
+"value of 255 tells hdparm to disable Advanced Power Management altogether on "
+"the drive (not all drives support disabling it, but most do)."
+msgstr ""
+"ドライバがサポートしていれば、 APM (advanced Power Management) "
+"機能の取得・設定を行う。 "
+"低い値は積極的な電源管理を意味し、 高い値はパフォーマンス優先を意味する。 "
+"指定可能な値の範囲は、 1 から 127 (スピンダウンを許可する) と、 "
+"128 から 254 (スピンダウンを許可しない) である。 "
+"最大レベルの電源管理は 1 を設定することで得られ、 "
+"最大の I/O パフォーマンスは 254 を設定することで得られる。 "
+"255 という値は、 そのドライブでの APM を完全に無効にする "
+"(全てのドライブが無効にする機能をサポートしているわけではないが、 "
+"多くはサポートする)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:44
+#, no-wrap
+msgid "I<-c>"
+msgstr "I<-c>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:71
+msgid ""
+"Get/set (E)IDE 32-bit I/O support.  A numeric parameter can be used to "
+"enable/disable 32-bit I/O support.  Currently supported values include B<0> "
+"to disable 32-bit I/O support, B<1> to enable 32-bit data transfers, and "
+"B<3> to enable 32-bit data transfers with a special B<sync> sequence "
+"required by many chipsets.  The value B<3> works with nearly all 32-bit IDE "
+"chipsets, but incurs slightly more overhead.  Note that \"32-bit\" refers to "
+"data transfers across a PCI or VLB bus to the interface card only; all "
+"(E)IDE drives still have only a 16-bit connection over the ribbon cable from "
+"the interface card."
+msgstr ""
+"(E)IDE の 32 ビット I/O サポートを取得・設定する。 "
+"32 ビット I/O サポートを有効・無効にするには、 "
+"以下の数値が用いられる。 "
+"I<0>: 32 ビット I/O サポートを無効にする。 "
+"I<1>: 32 ビットデータ転送を有効にする。 "
+"I<3>: 多くのチップセットで必要とされる、 特別な I<sync> "
+"シーケンスを使った 32 ビットデータ転送を有効にする。 "
+"ほぼ全ての 32 ビット IDE チップセットで I<3> "
+"は有効であるが、 ほんの少しだけオーバーヘッドがある。 "
+"\"32 ビット\" とは、 PCI または VLB "
+"バスとインタフェースカードとの間のデータ転送についてである。 "
+"すべての (E)IDE ドライブは、 いまだにインタフェースから"
+"リボンケーブルを通る 16 ビット接続しか持たない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:71
+#, no-wrap
+msgid "I<-C>"
+msgstr "I<-C>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:88
+msgid ""
+"Check the current IDE power mode status, which will always be one of "
+"B<unknown> (drive does not support this command), B<active/idle> (normal "
+"operation), B<standby> (low power mode, drive has spun down), or B<sleeping> "
+"(lowest power mode, drive is completely shut down).  The B<-S, -y, -Y,> and "
+"B<-Z> options can be used to manipulate the IDE power modes."
+msgstr ""
+"現在の IDE 電源モード状況を調べる。 これは必ず、 "
+"B<unkown> (ドライブはこのコマンドをサポートしない)、 "
+"B<active/idle> (通常の動作)、 B<standby> "
+"(低電力モード、 ドライブはスピンダウンしている)、 "
+"B<sleeping> "
+"(最小電力モード、 ドライブは完全に停止している) "
+"のうちのいずれかである。 フラグ B<-S>, B<-y>, B<-Y>, B<-Z> "
+"は IDE 電源モードを操作するのに用いられる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:88
+#, no-wrap
+msgid "I<-d>"
+msgstr "I<-d>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:104
+msgid ""
+"Get/set the \"using_dma\" flag for this drive.  This option now works with "
+"most combinations of drives and PCI interfaces which support DMA and which "
+"are known to the kernel IDE driver.  It is also a good idea to use the "
+"appropriate B<-X> option in combination with B<-d1> to ensure that the drive "
+"itself is programmed for the correct DMA mode, although most BIOSs should do "
+"this for you at boot time.  Using DMA nearly always gives the best "
+"performance, with fast I/O throughput and low CPU usage.  But there are at "
+"least a few configurations of chipsets and drives for which DMA does not "
+"make much of a difference, or may even slow things down (on really messed up "
+"hardware!).  Your mileage may vary."
+msgstr ""
+"ドライブの \"using_dma\" フラグを取得・設定する。 "
+"現在このオプションは、 ドライブと DMA をサポートした "
+"(カーネルの IDE ドライバが認識する) PCI インタフェース"
+"とのほとんどの組み合わせで動作する。 正しい DMA "
+"モードがドライブ自身にプログラムされることを"
+"確実にするために、 B<-d1> オプションと共に適切な B<-X> "
+"オプションを使用するのはよい考えである。 "
+"ただし、 これは多くの BIOS "
+"が起動時に実行してくれることである。 "
+"DMA の使用は、 ほとんどいつでも、 高速な I/O "
+"スループットと 低い CPU "
+"使用率によって、 最高のパフォーマンスを提供してくれる。 "
+"しかし、 少なくともいくつかのチップセットとドライブの設定では、 "
+"DMA が大きな違いを見せず、 (本当に間違ったハードウェア上では)  "
+"遅くなることもある。 効果は様々である。 "
+
+#. type: TP
+#: original/man8/hdparm.8:104
+#, no-wrap
+msgid "I<--dco-freeze>"
+msgstr "I<--dco-freeze>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:112
+msgid ""
+"DCO stands for Device Configuration Overlay, a way for vendors to "
+"selectively disable certain features of a drive.  The B<--dco-freeze> option "
+"will freeze/lock the current drive configuration, thereby preventing "
+"software (or malware)  from changing any DCO settings until after the next "
+"power-on reset."
+msgstr ""
+"DCO は Device Configuration Overlay の略で、 ベンダが"
+"ドライブの特定の機能を選択的に無効にできるようになっている。 "
+"B<--dco-freeze> オプションは、 "
+"次に電源を入れるときやリセットするときまで、 "
+"現在のドライブの設定をフリーズ/ロックし、 "
+"ソフトウェア (やマルウェア) が DCO の設定を変更するのを防ぐ。 "
+
+#. type: TP
+#: original/man8/hdparm.8:112
+#, no-wrap
+msgid "I<--dco-identify>"
+msgstr "I<--dco-identify>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:127
+msgid ""
+"Query and dump information regarding drive configuration settings which can "
+"be disabled by the vendor or OEM installer.  These settings show "
+"capabilities of the drive which might be disabled by the vendor for "
+"\"enhanced compatibility\".  When disabled, they are otherwise hidden and "
+"will not show in the B<-I> identify output.  For example, system vendors "
+"sometimes disable 48_bit addressing on large drives, for compatibility (and "
+"loss of capacity)  with a specific BIOS.  In such cases, B<--dco-identify> "
+"will show that the drive is 48_bit capable, but B<-I> will not show it, and "
+"nor will the drive accept 48_bit commands."
+msgstr ""
+"ベンダや OEM のインストーラによって無効にできるような、 "
+"ドライブの構成設定に関する情報を問い合わせてダンプする。 "
+"こうした設定としては、 \"互換性の拡大\" のために"
+"ベンダによって無効にされるかもしれないような、 "
+"ドライブの能力が表示される。 "
+"無効になると、 それらは B<-I> の識別情報では"
+"隠されて表示されない。 "
+"例えば、 システムベンダは特定の BIOS で、 互換性のため "
+"(または容量の損失のため) に大きなドライブで "
+"48_ビットアドレスを禁止することがある。 "
+"その場合、 B<--dco-identify> "
+"では48_ビット対応と表示されるが、 B<-I> "
+"では対応と表示されず、 "
+"48_ビットのコマンドを受け付けるとも表示されない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:127
+#, no-wrap
+msgid "I<--dco-restore>"
+msgstr "I<--dco-restore>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:138
+msgid ""
+"Reset all drive settings, features, and accessible capacities back to "
+"factory defaults and full capabilities.  This command will fail if DCO is "
+"frozen/locked, or if a B<-Np> maximum size restriction has also been set.  "
+"This is B<EXTREMELY DANGEROUS> and will very likely cause massive loss of "
+"data.  B<DO NOT USE THIS COMMAND.>"
+msgstr ""
+"ドライブのすべての設定、 機能、 アクセス能力を"
+"工場出荷時の全能力に戻す。 "
+"このコマンドは、 DCO がフリーズ/ロックされている場合や、 "
+"B<-Np> 最大サイズ制限が設定されている場合には、 "
+"失敗する。 "
+"このコマンドは B<きわめて危険> で、 多くのデータを失なう可能性が高い。 "
+"B<このコマンドは使うべきではない。> "
+
+#. type: TP
+#: original/man8/hdparm.8:138
+#, no-wrap
+msgid "I<--direct>"
+msgstr "I<--direct>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:147
+msgid ""
+"Use the kernel\\'s \"O_DIRECT\" flag when performing a B<-t> timing test.  "
+"This bypasses the page cache, causing the reads to go directly from the "
+"drive into hdparm's buffers, using so-called \"raw\" I/O.  In many cases, "
+"this can produce results that appear much faster than the usual page cache "
+"method, giving a better indication of raw device and driver performance."
+msgstr ""
+"B<-t> の測定でカーネルの \"O_DIRECT\" フラグを使う。 "
+"ページキャッシュを迂回するため、 読み込みは "
+"\"raw\" I/O と呼ばれる方法でドライブから直接 "
+"hdparm のバッファになされる。 "
+"多くの場合、 通常のページキャッシュ方式よりずっと速く結果を出し、 "
+"RAW デバイスやドライバの性能についてのよりよい表示となる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:147
+#, no-wrap
+msgid "I<--drq-hsm-error>"
+msgstr "I<--drq-hsm-error>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:157
+msgid ""
+"B<VERY DANGEROUS, DON'T EVEN THINK ABOUT USING IT.> This option causes "
+"hdparm to issue an IDENTIFY command to the kernel, but incorrectly marked as "
+"a \"non-data\" command.  This results in the drive being left with its "
+"DataReQust(DRQ) line \"stuck\" high.  This confuses the kernel drivers, and "
+"may crash the system immediately with massive data loss.  The option exists "
+"to help in testing and fortifying the kernel against similar real-world "
+"drive malfunctions.  B<VERY DANGEROUS, DO NOT USE!!>"
+msgstr ""
+"B<非常に危険なので、 使おうと考えるべきではない。> "
+"このオプションは、 カーネルに IDENTIFY コマンドを発行する。 "
+"しかし、 このコマンドは誤って \"non-data\" コマンドとなっている。 "
+"その結果、 ドライブの DataReQust (DRQ) 線が high に \"固定\" "
+"されたままになってしまう。 "
+"それによりカーネルのドライバが混乱して、 "
+"その場でシステムがクラッシュしたり、 "
+"多くのデータが失なわれたりすることがある。 "
+"このオプションは、 同じような現実のドライブの不具合について、 "
+"カーネルを検証し防御するときのために設けられている。 "
+"B<非常に危険なので、 使うべきではない。>"
+
+#. type: TP
+#: original/man8/hdparm.8:157
+#, no-wrap
+msgid "I<-D>"
+msgstr "I<-D>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:102
+msgid ""
+"Enable/disable the on-drive defect management feature, whereby the drive "
+"firmware tries to automatically manage defective sectors by relocating them "
+"to \"spare\" sectors reserved by the factory for such.  Control of this "
+"feature via the B<-D> option is not supported for most modern drives since "
+"ATA-4; thus this command may fail."
+msgstr ""
+"ドライブ上の不良セクタ管理機能を有効/無効にする。 "
+"有効にすると、 ドライブのファームウェアは、 不良セクタを"
+"工場設定された予約 \"スペア\" 領域に自動的に再配置しようと試みる。 "
+"この機能の B<-D> オプションによる制御は、 ATA-4 "
+"以降のドライブではサポートされていないことが多い。 "
+"それゆえに、 コマンドが失敗する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:167
+#, no-wrap
+msgid "I<-E>"
+msgstr "I<-E>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:174
+msgid ""
+"Set cd/dvd drive speed.  This is NOT necessary for regular operation, as the "
+"drive will automatically switch speeds on its own.  But if you want to play "
+"with it, just supply a speed number after the option, usually a number like "
+"2 or 4.  This can be useful in some cases, though, to smooth out DVD video "
+"playback."
+msgstr ""
+"CD/DVD ドライブのスピードを設定する。 "
+"ドライブはそれ自身で自動的に速度を変更するものなので、 "
+"通常の操作では必要ない。 "
+"しかし、 それで遊びたいなら、 2 や 4 "
+"といったような数字を オプションの後に指定すること。 "
+"ただし、 DVD ビデオ再生をスムーズにするような場合には役に立つかもしれない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:174
+#, no-wrap
+msgid "I<-f>"
+msgstr "I<-f>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:182
+msgid ""
+"Sync and flush the buffer cache for the device on exit.  This operation is "
+"also performed internally as part of the B<-t> and B<-T> timings and other "
+"options."
+msgstr ""
+"終了時に、 デバイスのバッファキャッシュを同期、 消去する。 "
+"この操作は、 内部的に I<-t> および I<-T> "
+"などのタイミングでも実行される。 "
+
+#. type: TP
+#: original/man8/hdparm.8:182
+#, no-wrap
+msgid "I<--fallocate>"
+msgstr "I<--fallocate>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:191
+msgid ""
+"This option currently works only on ext4 and xfs filesystem types.  When "
+"used, this must be the only option given.  It requires two parameters: the "
+"desired file size in kilo-bytes (byte count divided by 1024), followed by "
+"the pathname for the new file.  It will create a new file of the specified "
+"size, but without actually having to write any data to the file.  This will "
+"normally complete very quickly, and without thrashing the storage device."
+msgstr ""
+"現在のところこのオプションは ext4 と "
+"xfs のファイルシステムでのみ動作する。 "
+"使うときには、 ほかのオプションは指定しない。 "
+"希望するファイルサイズのキロバイト (バイト数を "
+"1024 で割った値) と、 新しいファイルのパス名の、 "
+"2 つのパラメータを与える。 "
+"これにより、 データを書き込むことなしに、 "
+"指定したサイズの新しいファイルが作られる。 "
+"問題がなければすぐに完了し、 "
+"記憶デバイスに激しくアクセスするようなこともない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:194
+#, no-wrap
+msgid "I<--fibmap>"
+msgstr "I<--fibmap>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:207
+msgid ""
+"When used, this must be the only option given.  It requires a file path as a "
+"parameter, and will print out a list of the block extents (sector ranges)  "
+"occupied by that file on disk.  Sector numbers are given as absolute LBA "
+"numbers, referenced from sector 0 of the physical device rather than from "
+"the partition or filesystem.  This information can then be used for a "
+"variety of purposes, such as examining the degree of fragmenation of larger "
+"files, or determining appropriate sectors to deliberately corrupt during "
+"fault-injection testing procedures."
+msgstr ""
+"使うときには、 ほかのオプションは指定しない。 "
+"ファイルのパスをパラメータにとり、 "
+"ディスク上でそのファイルが占有しているブロックのエクステント "
+"(セクタの範囲) のリストを出力する。 "
+"セクタ番号は、 パーティションやファイルシステムではなく、 "
+"物理デバイスのセクタ 0 から参照される絶対 LBA 番号で表される。 "
+"この情報は様々な用途で使われる。 "
+"大きなファイルのフラグメンテーションの度合いを調べる場合や、 "
+"フォールトインジェクションによるテストで"
+"意図したセクタが故意に壊れていることを測定する場合などである。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:214
+msgid ""
+"This option uses the new FIEMAP (file extent map) ioctl() when available, "
+"and falls back to the older FIBMAP (file block map) ioctl() otherwise.  Note "
+"that FIBMAP suffers from a 32-bit block-number interface, and thus not work "
+"beyond 8TB or 16TB.  FIBMAP is also very slow, and does not deal well with "
+"preallocated uncommitted extents in ext4/xfs filesystems, unless a sync() is "
+"done before using this option."
+msgstr ""
+"このオプションは、 ioctl() の新しい FIEMAP (file extent map) "
+"が使えればそれを使い、 "
+"そうでなければ ioctl() の従来からある FIBMAP (file block map) "
+"を替わりに使う。 "
+"FIBMAP は 32 ビットのブロック番号のインタフェースに問題を抱えており、 "
+"それにより 8TB や 16TB を超えると正常に動作しないことに注意して欲しい。 "
+"また、 FIBMAP はとても遅い。 "
+"FIBMAP はさらに、 このオプションを使う前に sync() されていない、 "
+"ext4/xfs ファイルシステムであらかじめアロケートされて"
+"コミットされていないエクステントと相性がよくない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:214
+#, no-wrap
+msgid "I<--fwdownload>"
+msgstr "I<--fwdownload>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:238
+msgid ""
+"When used, this should be the only option given.  It requires a file path "
+"immediately after the option, indicating where the new drive firmware should "
+"be read from.  The contents of this file will be sent to the drive using the "
+"(S)ATA B<DOWNLOAD MICROCODE> command, using either transfer protocol 7 "
+"(entire file at once), or, if the drive supports it, transfer protocol 3 "
+"(segmented download).  This command is B<EXTREMELY DANGEROUS> and could "
+"destroy both the drive and all data on it.  B<DO NOT USE THIS COMMAND.> The "
+"B<--fwdownload-mode3> , B<--fwdownload-mode3-max> , and "
+"B<--fwdownload-mode7> variations on basic B<--fwdownload> allow overriding "
+"automatic protocol detection in favour of forcing hdparm to use a specific "
+"transfer protocol, for testing purposes only."
+msgstr ""
+"使うときには、 ほかのオプションは指定しない。 "
+"オプション直後にファイルのパスをパラメータにとり、 "
+"読み込むべきドライブの新しいファームウェアを指定する。 "
+"このファイルの内容は、 "
+"(S)ATA の B<DOWNLOAD MICROCODE> コマンドにより、 "
+"転送プロトコル 7 (ファイル全体を一度に) か、 "
+"ドライブがサポートしていれば転送プロトコル 3 (分割されたダウンロード) "
+"でドライブに送られる。 "
+"このコマンドは B<きわめて危険> であり、 "
+"ドライブとその中の全てのデータを破壊する可能性がある。 "
+"B<このコマンドは使うべきではない。> "
+"B<--fwdownload-mode3>、 B<--fwdownload-mode3-max>、 "
+"B<--fwdownload-mode7> という、基本の B<--fwdownload> の変形は、 "
+"テスト目的のためだけに、 "
+"自動のプロトコル検出に優先して、 "
+"hdparm に指定した転送プロトコルを強制する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:238
+#, no-wrap
+msgid "I<-F>"
+msgstr "I<-F>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:241
+msgid "Flush the on-drive write cache buffer (older drives may not implement this)."
+msgstr ""
+"ドライブ上の書き込みキャッシュバッファをフラッシュする "
+"(古いドライブはこの機能を実装していないかもしれない)。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:194
+msgid "E.g. Create a 10KByte file: B<hdparm --fallocate 10 temp_file>"
+msgstr "例: 10Kバイトのファイルを作る: B<hdparm --fallocate 10 temp_file>"
+
+#. type: TP
+#: original/man8/hdparm.8:241
+#, no-wrap
+msgid "I<-g>"
+msgstr "I<-g>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:247
+msgid ""
+"Display the drive geometry (cylinders, heads, sectors), the size (in "
+"sectors) of the device, and the starting offset (in sectors) of the device "
+"from the beginning of the drive."
+msgstr ""
+"ドライブのジオメトリ (シリンダ数、ヘッダ数、セクタ数)、 "
+"デバイスのサイズ(セクタ数)、 デバイスのドライブ先頭からの "
+"開始オフセット(セクタ数)を表示する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:247
+#, no-wrap
+msgid "I<-h>"
+msgstr "I<-h>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:250
+msgid "Display terse usage information (help)."
+msgstr "簡単な使用方法 (ヘルプ) を表示する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:250
+#, no-wrap
+msgid "I<-H>"
+msgstr "I<-H>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:255
+msgid ""
+"Read the temperature from some (mostly Hitachi) drives.  Also reports if the "
+"temperature is within operating condition range (this may not be "
+"reliable). Does not cause the drive to spin up if idle."
+msgstr ""
+"一部 (主に日立) のドライブから温度を読み出す。 "
+"また、 温度が許容動作温度範囲 (これはあてにならないかもしれない) "
+"にあるかどうかを報告する。 "
+"アイドル時にドライブをスピンアップすることはない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:255
+#, no-wrap
+msgid "I<-i>"
+msgstr "I<-i>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:269
+msgid ""
+"Display the identification info which the kernel drivers (IDE, libata)  have "
+"stored from boot/configuration time.  This may differ from the current "
+"information obtainable directly from the drive itself with the B<-I> "
+"option.  The data returned may or may not be current, depending on activity "
+"since booting the system.  For a more detailed interpretation of the "
+"identification info, refer to I<AT Attachment Interface for Disk Drives,> "
+"ANSI ASC X3T9.2 working draft, revision 4a, April 19/93, and later editions."
+msgstr ""
+"起動時または設定時にカーネルドライバ (IDE、libata) "
+"に保存された識別情報を表示する。 "
+"この情報は、 ドライブから直接 B<-I> "
+"オプションで取得した現在の情報と異なる場合がある。 "
+"返されるデータは現在のものかもしれないし、 そうでないかもしれない。 "
+"どちらになるかは、 システム起動後の行動による。 "
+"識別情報の説明についての詳細は、 I<AT Attachment Interface "
+"for Disk Drives> (ANSI ASC X3T9.2 working draft, revision 4a, April 19/93)  "
+"またはその最新版を参照のこと。 "
+
+#. type: TP
+#: original/man8/hdparm.8:269
+#, no-wrap
+msgid "I<--idle-immediate>"
+msgstr "I<--idle-immediate>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:273
+msgid ""
+"Issue an ATA IDLE_IMMEDIATE command, to put the drive into a lower power "
+"state.  Usually the device remains spun-up."
+msgstr ""
+"ATA の IDLE_IMMEDIATE "
+"コマンドを発行して、 ドライブを低消費電力モードに移行する。 "
+"通常はデバイスはスピンアップしたままとなる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:273
+#, no-wrap
+msgid "I<--idle-unload>"
+msgstr "I<--idle-unload>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:277
+msgid ""
+"Issue an ATA IDLE_IMMEDIATE_WITH_UNLOAD command, to unload or park the heads "
+"and put the drive into a lower power state.  Usually the device remains "
+"spun-up."
+msgstr ""
+"ATA の IDLE_IMMEDIATE_WITH_UNLOAD "
+"コマンドを発行して、 ヘッドをアンロードまたは退避させ、 "
+"ドライブを低消費電力モードに移行する。 "
+"通常はデバイスはスピンアップしたままとなる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:277
+#, no-wrap
+msgid "I<-I>"
+msgstr "I<-I>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:284
+msgid ""
+"Request identification info directly from the drive, which is displayed in a "
+"new expanded format with considerably more detail than with the older B<-i> "
+"option."
+msgstr ""
+"直接ドライブに識別情報を要求する。 結果は、 古い I<-i> "
+"オプションと比べるとかなり詳細で、 新しい拡張されたフォーマットで表示される。 "
+
+#. type: TP
+#: original/man8/hdparm.8:284
+#, no-wrap
+msgid "I<-Istdin>"
+msgstr "I<-Istdin>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:303
+msgid ""
+"This is a special variation on the B<-I> option, which accepts a drive "
+"identification block as standard input instead of using a /dev/hd* "
+"parameter.  The format of this block must be B<exactly> the same as that "
+"found in the /proc/ide/*/hd*/identify \"files\", or that produced by the "
+"B<--Istdout> option described below.  This variation is designed for use "
+"with collected \"libraries\" of drive identification information, and can "
+"also be used on ATAPI drives which may give media errors with the standard "
+"mechanism.  When B<--Istdin> is used, it must be the *only* parameter given."
+msgstr ""
+"これは B<-I> オプションの特別な変形で、 /dev/hd* "
+"パラメータを使う代わりに、 標準入力から "
+"ドライブ識別ブロックを受け付ける。 "
+"このブロックのフォーマットは、 /proc/ide/*/hd*/identify "
+"\"ファイル\" から得られるものか、 次に示す B<-Istdout> "
+"オプションが生成するものと B<正確に> "
+"同じものでなければならない。 "
+"この変形版は、 ドライブ識別情報の \"ライブラリ\" "
+"集合と共に "
+"使用するよう設計されており、 また標準メカニズムでは "
+"メディアエラーになってしまう ATAPI "
+"ドライブに使用することもできる。 "
+"B<--Istdin> は、 *唯一の* "
+"パラメータとして与えられる必要がある。 "
+
+#. type: TP
+#: original/man8/hdparm.8:303
+#, no-wrap
+msgid "I<-Istdout>"
+msgstr "I<-Istdout>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:310
+msgid ""
+"This option dumps the drive's identify data in hex to stdout, in a format "
+"similar to that from /proc/ide/*/identify, and suitable for later use with "
+"the B<--Istdin> option."
+msgstr ""
+"単純に、 ドライブの識別データを標準出力に 16 進でダンプする。 "
+"フォーマットは /proc/ide/*/identify から得られるものに似ており、 "
+"後で B<-Istdin> オプションで使うのに適している。 "
+
+#. type: TP
+#: original/man8/hdparm.8:310
+#, no-wrap
+msgid "I<-J>"
+msgstr "I<-J>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:321
+msgid ""
+"Get/set the Western Digital (WD) Green Drive's \"idle3\" timeout value.  "
+"This timeout controls how often the drive parks its heads and enters a low "
+"power consumption state.  The factory default is eight (8) seconds, which is "
+"a very poor choice for use with Linux.  Leaving it at the default will "
+"result in hundreds of thousands of head load/unload cycles in a very short "
+"period of time.  The drive mechanism is only rated for 300,000 to 1,000,000 "
+"cycles, so leaving it at the default could result in premature failure, not "
+"to mention the performance impact of the drive often having to wake-up "
+"before doing routine I/O."
+msgstr ""
+"Western Digital (WD) の Green Drive の \"idle3\" "
+"タイムアウト値を取得・設定する。 "
+"このタイムアウトは、 ドライブがヘッドを退避させ"
+"低消費電力状態に入る頻度を制御する。 "
+"工場出荷時のデフォルト値は 8 秒だが、 "
+"この値は Linux で使うには非常によくない。 "
+"デフォルトのままにしておくと、 短かい間隔で、 "
+"何百回や何千回もヘッドのロード／アンロードが起こる。 "
+"ドライブの機構では 300,000 回から 1,000,000 回しか見積もられていないため、 "
+"デフォルトのままにしておくと、 "
+"実行時の I/O で頻繁にドライブが立ち上がって"
+"パフォーマンスに影響するだけでなく、 "
+"早期の故障にもつながる。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:329
+msgid ""
+"WD supply a WDIDLE3.EXE DOS utility for tweaking this setting, and you "
+"should use that program instead of hdparm if at all possible.  The "
+"reverse-engineered implementation in hdparm is not as complete as the "
+"original official program, even though it does seem to work on at a least a "
+"few drives.  A full power cycle is required for any change in setting to "
+"take effect, regardless of which program is used to tweak things."
+msgstr ""
+"WD はこの設定を調整する DOS ユーティリティの "
+"WDIDLE3.EXE を提供しており、 "
+"可能であれば hdparm ではなくこのプログラムを使ったほうがいい。 "
+"hdparam でのリバースエンジニアリングによる実装は、 "
+"いくつかのデバイスで動くように見えても、 "
+"元の公式プログラムほど完全ではない。 "
+"調整にどちらのプログラムを使うにせよ、 "
+"設定の効果が出るようにするには、 "
+"全出力にするなんらかの変更が必要となる。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:335
+msgid ""
+"A setting of 30 seconds is recommended for Linux use.  Permitted values are "
+"from 8 to 12 seconds, and from 30 to 300 seconds in 30-second increments.  "
+"Specify a value of zero (0) to disable the WD idle3 timer completely (NOT "
+"RECOMMENDED!)."
+msgstr ""
+"Linux で使うには 30 秒の設定が推奨される。 "
+"設定できる値は、 8 秒から 12 秒か、 "
+"30 秒刻みで 30 秒から 300 秒だ。 "
+"ゼロ (0) を指定すると、 WD の idle3 タイマーが完全に無効になる "
+"(*これは推奨されない*)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:335
+#, no-wrap
+msgid "I<-k>"
+msgstr "I<-k>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:352
+msgid ""
+"Get/set the \"keep_settings_over_reset\" flag for the drive.  When this flag "
+"is set, the drive will preserve the B<-dmu> settings over a soft reset, (as "
+"done during the error recovery sequence).  This option defaults to off, to "
+"prevent drive reset loops which could be caused by combinations of B<-dmu> "
+"settings.  The B<-k> option should therefore only be set after one has "
+"achieved confidence in correct system operation with a chosen set of "
+"configuration settings.  In practice, all that is typically necessary to "
+"test a configuration (prior to using -k) is to verify that the drive can be "
+"read/written, and that no error logs (kernel messages) are generated in the "
+"process (look in /var/log/messages on most systems)."
+msgstr ""
+"ドライブの \"keep_settings_over_reset\" "
+"フラグを取得・設定する。 "
+"このフラグがセットされた場合、 ドライブは "
+"(エラー回復手順の間に実行される) ソフトリセット後も "
+"B<-dmu> オプションを保持しようとする。 "
+"このオプションはデフォルトではオフになっている。 "
+"なぜなら、 B<-dmu> の組み合わせが原因で発生する、 "
+"ドライブのリセットループを避けるためである。 "
+"したがって、 選んだ設定の組み合わせでシステムが "
+"正しく動作するという確信を持てる場合にのみ B<-k> "
+"フラグを設定すべきである。 実際には、 "
+"(-k オプションを使う前に) "
+"設定のテストとして通常行っておくべきことは、 "
+"ドライブに読み書きできるか、 "
+"その処理中にエラーログ (カーネルメッセージ) "
+"が生成されていないかを確認することくらいである "
+"(多くのシステムでは /var/log/messages を参照)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:352
+#, no-wrap
+msgid "I<-K>"
+msgstr "I<-K>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:359
+msgid ""
+"Set the drive\\'s \"keep_features_over_reset\" flag.  Setting this enables "
+"the drive to retain the settings for B<-APSWXZ> over a soft reset (as done "
+"during the error recovery sequence).  Not all drives support this feature."
+msgstr ""
+"ドライブの \"keep_settings_over_reset\" "
+"フラグを取得、 設定する。 "
+"このフラグがセットされた場合、 ドライブは "
+"(エラー回復手順の間に実行される) ソフトリセット後も "
+"B<-APSWXZ> オプションを保持しようとする。 "
+"すべてのドライブがこの機能をサポートするわけではない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:359
+#, no-wrap
+msgid "I<-L>"
+msgstr "I<-L>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:375
+msgid ""
+"Set the drive\\'s doorlock flag.  Setting this to B<1> will lock the door "
+"mechanism of some removable hard drives (e.g. Syquest, ZIP, Jazz..), and "
+"setting it to B<0> will unlock the door mechanism.  Normally, Linux "
+"maintains the door locking mechanism automatically, depending on drive usage "
+"(locked whenever a filesystem is mounted).  But on system shutdown, this can "
+"be a nuisance if the root partition is on a removable disk, since the root "
+"partition is left mounted (read-only) after shutdown.  So, by using this "
+"command to unlock the door B<after> the root filesystem is remounted "
+"read-only, one can then remove the cartridge from the drive after shutdown."
+msgstr ""
+"ドライブのドアロックフラグを設定する。 "
+"これを B<1> にセットすると、 ある種のリムーバブルなドライブ "
+"(例えば Syquest, ZIP, Jazz など) でドア機構をロックし、 "
+"B<0> にセットするとドア機構のロックを解除する。 "
+"普通、 Linux はドライブの使用に応じて"
+"ドアロック機構を自動的に維持しようとする "
+"(ファイルシステムがマウントされている時にはいつもロックする)。 "
+"しかしルートパーティションがリムーバブルディスク上にある場合には、 "
+"ルートパーティションはシャットダウン後も (リードオンリーで)  "
+"マウントされたままなので、 この仕組みはシャットダウン時には "
+"迷惑なものになる。 "
+"よって、 ルートファイルシステムがリードオンリーで再マウントされた "
+"B<後に> "
+"このコマンドを使ってドアロックを解除すれば、 シャットダウン後に "
+"カートリッジをドライブから取り出すことができる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:375
+#, no-wrap
+msgid "I<-m>"
+msgstr "I<-m>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:399
+msgid ""
+"Get/set sector count for multiple sector I/O on the drive.  A setting of "
+"B<0> disables this feature.  Multiple sector mode (aka IDE Block Mode), is a "
+"feature of most modern IDE hard drives, permitting the transfer of multiple "
+"sectors per I/O interrupt, rather than the usual one sector per interrupt.  "
+"When this feature is enabled, it typically reduces operating system overhead "
+"for disk I/O by 30-50%.  On many systems, it also provides increased data "
+"throughput of anywhere from 5% to 50%.  Some drives, however (most notably "
+"the WD Caviar series), seem to run slower with multiple mode enabled.  Your "
+"mileage may vary.  Most drives support the minimum settings of 2, 4, 8, or "
+"16 (sectors).  Larger settings may also be possible, depending on the "
+"drive.  A setting of 16 or 32 seems optimal on many systems.  Western "
+"Digital recommends lower settings of 4 to 8 on many of their drives, due "
+"tiny (32kB) drive buffers and non-optimized buffering algorithms.  The B<-i> "
+"option can be used to find the maximum setting supported by an installed "
+"drive (look for MaxMultSect in the output).  Some drives claim to support "
+"multiple mode, but lose data at some settings.  Under rare circumstances, "
+"such failures can result in B<massive filesystem corruption.>"
+msgstr ""
+"ドライブの複数セクタ I/O のセクタ数を取得・設定する。 "
+"B<0> に設定すると、 この機能を無効にする。 "
+"複数セクタモード (これは IDE ブロックモードとしても知られる) "
+"は現在のほとんどの IDEハードドライブが持つ機能で、 一つの I/O "
+"割り込みで一つのセクタではなく、 一つの I/O "
+"割り込みで複数のセクタの転送を可能にする。 "
+"この機能を有効にすると、 典型的には、 ディスク I/O "
+"に対する オペレーティングシステムのオーバーヘッドを "
+"30% から 50% 減らす。 "
+"また、 多くのシステムではデータのスループットを 5% "
+"から 50% 向上させる。 "
+"しかしいくつかのドライブ (特に WD Caviar "
+"シリーズ) では、 "
+"複数セクタモードを有効にすると遅くなるように見える。 "
+"効果は様々である。 "
+"多くのドライブでは、 最低限の設定である 2, 4, 8, "
+"16 (セクタ) をサポートする。 "
+"ドライブによるが、 さらに大きな設定も可能かもしれない。 "
+"多くのシステムでは、 16 または 32 が最適のようである。 "
+"多くの Western Digital "
+"のドライブでは、 その小さなドライブバッファ (32kB) "
+"と最適化されていないバッファアルゴリズムのせいで、 4 "
+"から 8 という小さな値が推奨されている。 "
+"ドライブの最大値を見つけるのには、 B<-i> "
+"オプションが使用できる (出力の MaxMultSect を参照のこと)。 "
+"あるドライブでは、 複数モードをサポートしていると主張するものの、 "
+"設定によってはデータを失ってしまう。 "
+"まれな状況の下では、 そのような失敗は "
+"B<大量のファイルシステムの不正> を生む結果となる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:399
+#, no-wrap
+msgid "I<--make-bad-sector>"
+msgstr "I<--make-bad-sector>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:424
+msgid ""
+"Deliberately create a bad sector (aka. \"media error\") on the disk.  "
+"B<EXCEPTIONALLY DANGEROUS. DO NOT USE THIS OPTION!!> This can be useful for "
+"testing of device/RAID error recovery mechanisms.  The sector number is "
+"given as a (base10) parameter after the option.  Depending on the device, "
+"hdparm will choose one of two possible ATA commands for corrupting the "
+"sector.  The WRITE_LONG works on most drives, but only up to the 28-bit "
+"sector boundary.  Some very recent drives (2008) may support the new "
+"WRITE_UNCORRECTABLE_EXT command, which works for any LBA48 sector.  If "
+"available, hdparm will use that in preference to WRITE_LONG.  The "
+"WRITE_UNCORRECTABLE_EXT command itself presents a choice of how the new bad "
+"sector should behave.  By default, it will look like any other bad sector, "
+"and the drive may take some time to retry and fail on subsequent READs of "
+"the sector.  However, if a single letter B<f> is prepended immediately in "
+"front of the first digit of the sector number parameter, then hdparm will "
+"issue a \"flagged\" WRITE_UNCORRECTABLE_EXT, which causes the drive to "
+"merely flag the sector as bad (rather than genuinely corrupt it), and "
+"subsequent READs of the sector will fail immediately (rather than after "
+"several retries).  Note also that the B<--repair-sector> option can be used "
+"to restore (any) bad sectors when they are no longer needed, including "
+"sectors that were genuinely bad (the drive will likely remap those to a "
+"fresh area on the media)."
+msgstr ""
+"故意にディスクに不良セクタ (別名 \"メディアエラー\") を作る。 "
+"B<危険すぎる。 このオプションは使うべきではない!!> "
+"デバイスや RAID のエラー回復機構をテストする場合には有用である。 "
+"オプションの後に、 パラメータとしてセクタ番号を与える (単位は 10)。 "
+"hdparm はセクタを破壊するのに、デバイスによって ATA "
+"コマンドの 2 つの候補から 1 つを選ぶ。 "
+"ほとんどのドライブでは WRITE_LONG が使われるが、 "
+"最大 28 ビットのセクタが限界である。 "
+"ごく最近 (2008 年時点）のドライブでは、 "
+"LBA48 セクタに対応した新しい WRITE_UNCORRECTABLE_EXT "
+"コマンドをサポートしている場合がある。 "
+"可能であれば、 hdparm は WRITE_LONG に優先してこちらを使う。 "
+"WRITE_UNCORRECTABLE_EXT コマンド自身に、 "
+"新しい不良セクターのふるまいの選択を示す。 "
+"デフォルトでは、 ほかの不良セクタと同じように見え、 "
+"ドライブは続くセクタの READ でときどきリトライし失敗する。 "
+"一方、 パラメータとして与えられたセクタ番号の最初の数字に "
+"B<f> 一文字が前置されていると、 hdparm は "
+"\"フラグ付き\" の WRITE_UNCORRECTABLE_EXT を発行する。 "
+"それにより、 ドライブはセクタに単に (真に壊れているというより) "
+"良セクタというフラグを立て、 続くセクタの READ "
+"で即座に失敗する (数回のリトライの後ではなく)。 "
+"B<--repair-sector> オプションが、 "
+"真の不良セクタを含む必要のなくなった不良セクタを、 "
+"すべて修復するのに使われることにもにも留意しておきたい "
+"(ドライブはそれらをメディア上の新しい領域のように再配置する)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:424
+#, no-wrap
+msgid "I<-M>"
+msgstr "I<-M>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:434
+msgid ""
+"Get/set Automatic Acoustic Management (AAM) setting. Most modern harddisk "
+"drives have the ability to speed down the head movements to reduce their "
+"noise output.  The possible values are between 0 and 254. 128 is the most "
+"quiet (and therefore slowest) setting and 254 the fastest (and "
+"loudest). Some drives have only two levels (quiet / fast), while others may "
+"have different levels between 128 and 254.  At the moment, most drives only "
+"support 3 options, off, quiet, and fast.  These have been assigned the "
+"values 0, 128, and 254 at present, respectively, but integer space has been "
+"incorporated for future expansion, should this change."
+msgstr ""
+"自動音響管理 (Automatic Acoustic Management; AAM) を取得・設定する。 "
+"現在のほとんどのハードディスクドライブは、 "
+"動作音を低減させるためにヘッド動作をスピードダウンさせる能力を持つ。 "
+"指定可能な値は 0 から 254 である。 128 "
+"が最も静かで(よって最も遅く)、 254 "
+"が最も速い(そして最もうるさい)。 "
+"あるドライブでは(静音・高速の) 2 "
+"つのレベルしか持たないが、 他のものは 128 から 254 "
+"の間で異なるレベルを持つ。 "
+"今のところ、 多くのドライブは、 オフ、 静穏、 高速の "
+"3 つのオプションのみサポートしている。 "
+"これらは今のところ、 それぞれ 0、128、254 に割り当てられているが、 "
+"将来の拡張に備えて整数空間が取り入れられており、 変更されるだろう。"
+
+#. type: TP
+#: original/man8/hdparm.8:434
+#, no-wrap
+msgid "I<-n>"
+msgstr "I<-n>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:438
+msgid ""
+"Get or set the \"ignore_write_errors\" flag in the driver.  Do NOT play with "
+"this without grokking the driver source code first."
+msgstr ""
+"ドライブの \"ignore_write_errors\" フラグを設定・取得する。 "
+"ドライバのソースコードを把握することなしに、 このフラグで遊ばないこと。 "
+
+#. type: TP
+#: original/man8/hdparm.8:438
+#, no-wrap
+msgid "I<-N>"
+msgstr "I<-N>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:485
+msgid ""
+"Get/set max visible number of sectors, also known as the B<Host Protected "
+"Area> setting.  Without a parameter, B<-N> displays the current setting, "
+"which is reported as two values: the first gives the current max sectors "
+"setting, and the second shows the native (real) hardware limit for the "
+"disk.  The difference between these two values indicates how many sectors of "
+"the disk are currently hidden from the operating system, in the form of a "
+"B<Host Protected Area (HPA).> This area is often used by computer makers to "
+"hold diagnostic software, and/or a copy of the originally provided operating "
+"system for recovery purposes.  Another possible use is to hide the true "
+"capacity of a very large disk from a BIOS/system that cannot normally cope "
+"with drives of that size (eg. most current {2010} BIOSs cannot deal with "
+"drives larger than 2TB, so an HPA could be used to cause a 3TB drive to "
+"report itself as a 2TB drive).  To change the current max (VERY DANGEROUS, "
+"DATA LOSS IS EXTREMELY LIKELY), a new value should be provided (in base10) "
+"immediately following the B<-N> option.  This value is specified as a count "
+"of sectors, rather than the \"max sector address\" of the drive.  Drives "
+"have the concept of a temporary (volatile) setting which is lost on the next "
+"hardware reset, as well as a more permanent (non-volatile)  value which "
+"survives resets and power cycles.  By default, B<-N> affects only the "
+"temporary (volatile) setting.  To change the permanent (non-volatile) value, "
+"prepend a leading B<p> character immediately before the first digit of the "
+"value.  Drives are supposed to allow only a single permanent change per "
+"session.  A hardware reset (or power cycle) is required before another "
+"permanent B<-N> operation can succeed.  Note that any attempt to set this "
+"value may fail if the disk is being accessed by other software at the same "
+"time.  This is because setting the value requires a pair of back-to-back "
+"drive commands, but there is no way to prevent some other command from being "
+"inserted between them by the kernel.  So if it fails initially, just try "
+"again.  Kernel support for B<-N> is buggy for many adapter types across many "
+"kernel versions, in that an incorrect (too small) max size value is "
+"sometimes reported.  As of the 2.6.27 kernel, this does finally seem to be "
+"working on most hardware."
+msgstr ""
+"見えるセクタの最大数を取得・設定する。 "
+"これは B<Host Protected Area> の設定と呼ばれる。 "
+"B<-N> にパラメータを指定しない場合、 現在の設定として 2 つの値を表示する。 "
+"1 つ目は現在の最大セクタ数の設定、 "
+"2 つ目はドライブのネイティブな (真の) ハードウェアの限度である。 "
+"2 つの値の違いは、 B<Host Protected Area (HPA)> "
+"として現在 OS から隠されているセクタの数である。 "
+"この領域はしばしばコンピュータメーカーにより、 "
+"診断ソフトウェアや、 復旧用の OS のコピーを入れておくのに使われる。 "
+"そのほかの用途としては、 "
+"大容量のディスクに対応できない BIOS "
+"やシステムから真の容量を隠す場合がありうる "
+"(例: 現在 (2010 年) のほとんどの BIOS は 2TB "
+"を超えるドライブを扱えないため、 "
+"3TB のドライブを 2TB のドライブとして見せるために "
+"HPA が使われることがある)。 "
+"現在の最大値を変更するには (*非常に危険、 データの消失が大いにありうる*) "
+"B<-N> の直後に新しい値 (10 進数) を指定する。 "
+"この値としては、 ドライブの \"最大のセクタ番号\" ではなく、 "
+"セクタの数を指定する。 "
+"ドライブには、"
+"次のハードウェアのリセットで失なわれる一時的な (つかの間の) 設定と、 "
+"リセットや電源のオンオフで失われない、 "
+"より恒久的な (一時的でない) 値の両方の概念がある。 "
+"デフォルトでは、 B<-N> は一時的な (つかの間の) 設定にだけ影響する。 "
+"恒久的な (一時的でない) 値を変更するには、 "
+"値の最初に B<p> の文字を付ける。 "
+"ドライブは、 1 回のセッションで "
+"1 つの恒久的な変更だけを受け付けることが想定されている。 "
+"続いてもう一度、 恒久的な B<-N> の操作をするには、 "
+"まずハードウェアのリセット (または電源のオンオフ) が必要となる。 "
+"値の設定は、 ほかのソフトウェアが同時にディスクにアクセスしていると、 "
+"失敗することがあることに注意して欲しい。 "
+"これが起こるのは、 "
+"値を設定するにはドライブに 2 つの連続したコマンドを送るが、 "
+"カーネルでは 2 つの間に別のコマンドが入るのを防ぐ方法がないためである。 "
+"一度失敗したら、 もう一度試して欲しい。 "
+"B<-N> のカーネルのサポートは、 "
+"多くのアダプタと多くのバージョンのカーネルでバグがあり、 "
+"最大サイズとして不正確な (小さい) 値が報告される場合がある。"
+"2.6.27 カーネル以降では、 "
+"ほとんどのハードウェアで動くようになっているようだ。 "
+
+#. type: TP
+#: original/man8/hdparm.8:485
+#, no-wrap
+msgid "I<--offset>"
+msgstr "I<--offset>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:493
+msgid ""
+"Offsets to given number of GiB (1024*1024*1024) when performing B<-t> "
+"timings of device reads.  Speed changes (about twice) along many mechanical "
+"drives.  Usually the maximum is at the beginning, but not always.  "
+"Solid-state drives (SSDs) should show similar timings regardless of offset."
+msgstr ""
+"B<-t> でデバイス読み込みを測定するときに、 "
+"GiB (1024*1024*1024) で与えられた数値だけオフセットする。 "
+"多くの機械式デバイスではスピードが変わる (約 2 倍)。 "
+"通常は、 最大値になるのは先頭からだが、 "
+"必ずしもそうと限らない。 "
+"SSD  ではオフセットにかかわらず同じような測定値になるだろう。 "
+
+#. type: TP
+#: original/man8/hdparm.8:493
+#, no-wrap
+msgid "I<-p>"
+msgstr "I<-p>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:509
+msgid ""
+"Attempt to reprogram the IDE interface chipset for the specified PIO mode, "
+"or attempt to auto-tune for the \"best\" PIO mode supported by the drive.  "
+"This feature is supported in the kernel for only a few \"known\" chipsets, "
+"and even then the support is iffy at best.  Some IDE chipsets are unable to "
+"alter the PIO mode for a single drive, in which case this option may cause "
+"the PIO mode for I<both> drives to be set.  Many IDE chipsets support either "
+"fewer or more than the standard six (0 to 5) PIO modes, so the exact speed "
+"setting that is actually implemented will vary by chipset/driver "
+"sophistication.  I<Use with extreme caution!> This feature includes zero "
+"protection for the unwary, and an unsuccessful outcome may result in "
+"I<severe filesystem corruption!>"
+msgstr ""
+"指定した PIO モードに IDE "
+"チップセットインタフェースを再プログラムする"
+"よう試みるか、 またはドライブがサポートする "
+"\"最良の\" PIO モードに 自動設定しようと試みる。 "
+"この機能は少数の \"知られた\" "
+"チップセットでのみカーネルでサポートされており、 "
+"そのサポートもよくて不確実なものである。 "
+"ある IDE チップセットでは、 一つのドライブに対して PIO "
+"モードを変更することができず、 その場合は、 このオプションは "
+"I<両方の> ドライブに設定される。 "
+"多くの IDE チップセットがサポートするモードは、 標準の 6 個 "
+"(0 から 5) の PIO モードより多かったり少なかったりするので、 "
+"実際に実装されている正確な速度設定は、 "
+"チップセット・ドライバの性格によって様々である。 "
+"I<最大の注意を払って使用すること!> "
+"この機能は不注意からは何も守ってくれず、 また実行の失敗は "
+"I<深刻なファイルシステムの不正> をもたらすであろう。 "
+
+#. type: TP
+#: original/man8/hdparm.8:509
+#, no-wrap
+msgid "I<-P>"
+msgstr "I<-P>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:514
+msgid ""
+"Set the maximum sector count for the drive\\'s internal prefetch mechanism.  "
+"Not all drives support this feature, and it was dropped from the offical "
+"spec as of ATA-4."
+msgstr ""
+"ドライブ内部のプリフェッチ機構の、 最大セクタ数を設定する。 "
+"すべてのドライブがこの機能をサポートするわけではなく、 "
+"ATA-4 以降の公式仕様からも外された。 "
+
+#. type: TP
+#: original/man8/hdparm.8:514
+#, no-wrap
+msgid "I<--prefer-ata12>"
+msgstr "I<--prefer-ata12>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:522
+msgid ""
+"When using the SAT (SCSI ATA Translation) protocol, hdparm normally prefers "
+"to use the 16-byte command format whenever possible.  But some USB drive "
+"enclosures don't work correctly with 16-byte commands.  This option can be "
+"used to force use of the smaller 12-byte command format with such drives.  "
+"hdparm will still revert to 16-byte commands for things that cannot be done "
+"with the 12-byte format (e.g. sector accesses beyond 28-bits)."
+msgstr ""
+"SAT (SCSI ATA Translation) プロトコルでは、 hdparm は通常、 "
+"16 バイトコマンド形式が使えるときは使うことを選ぶ。 "
+"しかし、 いくつかの外付け USB ドライブでは "
+"16 バイトコマンドは正しく動作しない。 "
+"このオプションは、 そのようなドライブに、 "
+"より小さい 12 バイトコマンド形式を強制するのに使われる。 "
+"hdparm は、 12 バイト形式ではできないことでは 16 バイトコマンドに戻る "
+"(例: 28 ビットを超えるセクタアクセス)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:522
+#, no-wrap
+msgid "I<-q>"
+msgstr "I<-q>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:535
+msgid ""
+"Handle the next option quietly, suppressing normal output (but not error "
+"messages).  This is useful for reducing screen clutter when running from "
+"system startup scripts.  Not applicable to the B<-i> or B<-v> or B<-t> or "
+"B<-T> options."
+msgstr ""
+"その次に来るオプションに対し、 通常の出力を抑止する "
+"(エラーメッセージを除く)。 "
+"システム起動スクリプトから実行するときに、 "
+"画面が混乱するのを減らすのに便利である。 "
+"B<-i>, B<-v>, B<-t>, B<-T> オプションには適用できない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:535
+#, no-wrap
+msgid "I<-Q>"
+msgstr "I<-Q>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:541
+msgid ""
+"Get or set the device's command queue_depth, if supported by the hardware.  "
+"This only works with 2.6.xx (or later) kernels, and only with device and "
+"driver combinations which support changing the queue_depth.  For SATA disks, "
+"this is the Native Command Queuing (NCQ) queue depth."
+msgstr ""
+"ハードウェアがサポートしていれば、 デバイスのコマンドの "
+"queue_depth を取得・設定する。"
+"これは、 2.6.xx (以降) のカーネルと、 queue_depth "
+"の変更をサポートするデバイスおよびドライバの組み合わせでのみ動作する。 "
+"SATA ディスクでは、 Native Command Queuing (NCQ) の "
+"queue depth となる。"
+
+#. type: TP
+#: original/man8/hdparm.8:541
+#, no-wrap
+msgid "I<-r>"
+msgstr "I<-r>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:544
+msgid ""
+"Get/set read-only flag for the device.  When set, Linux disallows write "
+"operations on the device."
+msgstr ""
+"デバイスのリードオンリーフラグを設定・取得する。 "
+"フラグをセットすると、 Linux "
+"はデバイスへの書き込み操作を許可しない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:544
+#, no-wrap
+msgid "I<-R>"
+msgstr "I<-R>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:555
+msgid ""
+"Get/set Write-Read-Verify feature, if the drive supports it.  Usage: B<-R0> "
+"(disable) or B<-R1> (enable).  This feature is intended to have the drive "
+"firmware automatically read-back any data that is written by software, to "
+"verify that the data was successfully written.  This is generally overkill, "
+"and can slow down disk writes by as much as a factor of two (or more)."
+msgstr ""
+"ドライブがサポートしていれば Write-Read-Verify 機能を取得・設定する。 "
+"使用法: B<-R0> (無効にする) または B<-R1> (有効にする)。 "
+"この機能は、 ソフトウェアの書き込んだデータを、 "
+"ドライブのファームウェアが自動的に読み直すことで、 "
+"データが正常に書き込まれていることを検証するためのものである。 "
+"これは一般的にやりすぎであり、 "
+"ディスク書き込みを 2 倍 (またはそれ以上) "
+"程度遅くする。"
+
+#. type: TP
+#: original/man8/hdparm.8:555
+#, no-wrap
+msgid "I<--read-sector>"
+msgstr "I<--read-sector>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:562
+msgid ""
+"Reads from the specified sector number, and dumps the contents in hex to "
+"standard output.  The sector number must be given (base10) after this "
+"option.  hdparm will issue a low-level read (completely bypassing the usual "
+"block layer read/write mechanisms)  for the specified sector.  This can be "
+"used to definitively check whether a given sector is bad (media error) or "
+"not (doing so through the usual mechanisms can sometimes give false "
+"positives)."
+msgstr ""
+"指定された番号のセクタから読み出し、 "
+"内容を 16 進数で標準出力にダンプする。 "
+"オプションの後にセクタ番号 (10 進数) を指定しなくてはならない。 "
+"hdparm は指定されたセクタに低レベルの読み込みを発行する "
+"(完全に通常のブロックレイヤーの読み書き機構を迂回する)。 "
+"与えられたセクタが不良セクタ (メディアエラー) "
+"かどうか決定的にチェックするのに使われる "
+"(通常の機構で同じことをしようとすると、 偽陽性の可能性がある)。 "
+
+#. type: TP
+#: original/man8/hdparm.8:562
+#, no-wrap
+msgid "I<--repair-sector>"
+msgstr "I<--repair-sector>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:567
+msgid "This is an alias for the B<--write-sector> option.  VERY DANGEROUS."
+msgstr "B<--write-sector> の別名。 *非常に危険*。"
+
+#. type: TP
+#: original/man8/hdparm.8:567
+#, no-wrap
+msgid "I<-s>"
+msgstr "I<-s>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:587
+msgid ""
+"Enable/disable the power-on in standby feature, if supported by the drive.  "
+"B<VERY DANGEROUS.> Do not use unless you are absolutely certain that both "
+"the system BIOS (or firmware) and the operating system kernel (Linux E<gt>= "
+"2.6.22) support probing for drives that use this feature.  When enabled, the "
+"drive is powered-up in the B<standby> mode to allow the controller to "
+"sequence the spin-up of devices, reducing the instantaneous current draw "
+"burden when many drives share a power supply.  Primarily for use in large "
+"RAID setups.  This feature is usually disabled and the drive is powered-up "
+"in the B<active> mode (see -C above).  Note that a drive may also allow "
+"enabling this feature by a jumper.  Some SATA drives support the control of "
+"this feature by pin 11 of the SATA power connector. In these cases, this "
+"command may be unsupported or may have no effect."
+msgstr ""
+"ドライブがサポートしていれば、 "
+"power-on in standby 機能の有効・無効を設定する。 "
+"B<非常に危険。> "
+"システムの BIOS (またはファームウェア) と "
+"OS のカーネル (Linux E<gt>= 2.6.22) "
+"によるこの機能の調査のサポートの両方を、 "
+"完全に理解していなければ、 使ってはならない。 "
+"有効にすると、 ドライブは電源を入れたときに "
+"B<standby> モードとなり、 "
+"コントローラが順番にデバイスをスピンアップできるようになる。 "
+"これにより、 多くのドライブが電源を共有しているときに、 "
+"瞬時電流の負担を減らせる。"
+"主に、 大規模な RAID の場合である。 "
+"この機能は通常は無効になっており、 "
+"ドライブは電源を入れたときに B<active> モードになる "
+"(上記 -C を参照)。 "
+"この機能をドライブのジャンパ線で有効にする場合もあることに注意。 "
+"この機能を SATA の電源コネクタの 11 番ピンで制御できるものもある。 "
+"そのような場合、 "
+"このコマンドはサポートされず、 効果を持たないかもしれない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:587
+#, no-wrap
+msgid "I<-S>"
+msgstr "I<-S>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:605
+msgid ""
+"Put the drive into idle (low-power) mode, and also set the standby "
+"(spindown) timeout for the drive.  This timeout value is used by the drive "
+"to determine how long to wait (with no disk activity)  before turning off "
+"the spindle motor to save power.  Under such circumstances, the drive may "
+"take as long as 30 seconds to respond to a subsequent disk access, though "
+"most drives are much quicker.  The encoding of the timeout value is somewhat "
+"peculiar.  A value of zero means \"timeouts are disabled\": the device will "
+"not automatically enter standby mode.  Values from 1 to 240 specify "
+"multiples of 5 seconds, yielding timeouts from 5 seconds to 20 minutes.  "
+"Values from 241 to 251 specify from 1 to 11 units of 30 minutes, yielding "
+"timeouts from 30 minutes to 5.5 hours.  A value of 252 signifies a timeout "
+"of 21 minutes. A value of 253 sets a vendor-defined timeout period between 8 "
+"and 12 hours, and the value 254 is reserved.  255 is interpreted as 21 "
+"minutes plus 15 seconds.  Note that some older drives may have very "
+"different interpretations of these values."
+msgstr ""
+"ドライブを idle (低電力) モードにし、 "
+"スタンバイ (スピンダウン) タイムアウトを設定する。 "
+"電力を節約するためにスピンドルモーターを停止するまでに、 "
+"どれだけ長く (ディスク動作のない状態を) 待つかを "
+"ドライブが決定するのにこのタイムアウト値が使用される。 "
+"そのような状況下では、 次のディスクアクセスには 30 "
+"秒以内に反応するはずだ。 "
+"ほとんどのドライブはもっと速く反応する。 "
+"タイムアウト値の符号化はちょっと変わっている。 "
+"値 0 は \"タイムアウトは無効\" "
+"を意味し、 standby モードに自動的には移行しない。 "
+"値が 1 から 240 の場合は、 5 秒の倍数の指定になり、 "
+"タイムアウトは 5 秒から 20 分になる。 "
+"値 241 から 251 は、 30 分単位の 1 から 11 の指定になり、 "
+"タイムアウトは 30 分から 5.5 時間になる。 "
+"値 252 は 21 分を意味する。 "
+"値 253 はベンダ定義のタイムアウトで、 8 "
+"分から 12 時間の間のいずれかである。 "
+"値 254 は予約されている。 "
+"値 255 は、 21 分 15 秒を意味する。 "
+"いくつかの古いドライブでは、 これらの値に対して全く異なる解釈をするので"
+"注意して欲しい。 "
+
+#. type: TP
+#: original/man8/hdparm.8:605
+#, no-wrap
+msgid "I<-t>"
+msgstr "I<-t>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:618
+msgid ""
+"Perform timings of device reads for benchmark and comparison purposes.  For "
+"meaningful results, this operation should be repeated 2-3 times on an "
+"otherwise inactive system (no other active processes) with at least a couple "
+"of megabytes of free memory.  This displays the speed of reading through the "
+"buffer cache to the disk without any prior caching of data.  This "
+"measurement is an indication of how fast the drive can sustain sequential "
+"data reads under Linux, without any filesystem overhead.  To ensure accurate "
+"measurements, the buffer cache is flushed during the processing of I<-t> "
+"using the BLKFLSBUF ioctl."
+msgstr ""
+"ベンチマークおよび比較目的で、 デバイス読み込みを測定する。 "
+"有意な結果を得るためには、 少なくとも数メガバイトの空きメモリがあり、 "
+"他にアクティブなプロセスがない状態で、 この操作を 2、3 "
+"回 繰り返すべきである。 "
+"これはデータのキャッシュがない状態から、 バッファキャッシュを通して"
+"ディスクを読み出す速度を表示する。 "
+"これは、 ファイルシステムのオーバーヘッドなしに、 そのドライブが "
+"Linux でどれだけ連続データ読み込み速度を維持できるかを"
+"測定するものである。 "
+"測定の正確さを上げたいのであれば、 I<-t> の実行の間に "
+"BLKFLSBUF ioctl を使ってバッファキャッシュをクリアする。 "
+
+#. type: TP
+#: original/man8/hdparm.8:618
+#, no-wrap
+msgid "I<-T>"
+msgstr "I<-T>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:627
+msgid ""
+"Perform timings of cache reads for benchmark and comparison purposes.  For "
+"meaningful results, this operation should be repeated 2-3 times on an "
+"otherwise inactive system (no other active processes) with at least a couple "
+"of megabytes of free memory.  This displays the speed of reading directly "
+"from the Linux buffer cache without disk access.  This measurement is "
+"essentially an indication of the throughput of the processor, cache, and "
+"memory of the system under test."
+msgstr ""
+"ベンチマークおよび比較目的で、 キャッシュ読み込みを測定する。 "
+"有意な結果を得るためには、 少なくとも数メガバイトの空きメモリがあり、 "
+"他にアクティブなプロセスがない状態で、 この操作を 2、3 "
+"回 繰り返すべきである。 "
+"これは、 ディスクアクセスなしに、 Linux "
+"のバッファキャッシュから直接読み出す速度を表示する。 "
+"これは、 テスト環境下での、 プロセッサ・キャッシュ・メモリの"
+"基本的な処理能力を測定するものである。 "
+
+#. type: TP
+#: original/man8/hdparm.8:627
+#, no-wrap
+msgid "I<--trim-sector-ranges>"
+msgstr "I<--trim-sector-ranges>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:639
+msgid ""
+"For Solid State Drives (SSDs).  B<EXCEPTIONALLY DANGEROUS. DO NOT USE THIS "
+"OPTION!!> Tells the drive firmware to discard unneeded data sectors, "
+"destroying any data that may have been present within them.  This makes "
+"those sectors available for immediate use by the firmware's garbage "
+"collection mechanism, to improve scheduling for wear-leveling of the flash "
+"media.  This option expects one or more sector range pairs immediately after "
+"the option: an LBA starting address, a colon, and a sector count (max "
+"65535), with no intervening spaces.  B<EXCEPTIONALLY DANGEROUS. DO NOT USE "
+"THIS OPTION!!>"
+msgstr ""
+"SSD 用。 "
+"B<きわめて危険。 このオプションは使うべきではない!!> "
+"不要なセクタをドライブのファームウェアに伝え、 "
+"そこに存在するすべてのデータを破壊する。 "
+"それらのセクタは、 "
+"即座にファームウェアのガベージコレクション機構の対象となり、 "
+"フラッシュデバイスのウェアレベリングのスケジュールが向上する。 "
+"このオプションの直後に、 セクタ範囲を表す組を  1 つ以上指定する。 "
+"LBA 開始アドレス、 コロン、 セクタ数 (最大 65535) を、"
+"空白を入れずに指定する。 "
+"B<きわめて危険。 このオプションは使うべきではない!!> "
+
+#. type: Plain text
+#: original/man8/hdparm.8:642
+msgid "E.g.  B<hdparm --trim-sector-ranges 1000:4 7894:16 /dev/sdz>"
+msgstr "E.g.  B<hdparm --trim-sector-ranges 1000:4 7894:16 /dev/sdz>"
+
+#. type: TP
+#: original/man8/hdparm.8:642
+#, no-wrap
+msgid "I<--trim-sector-ranges-stdin>"
+msgstr "I<--trim-sector-ranges-stdin>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:651
+msgid ""
+"Identical to B<--trim-sector-ranges> above, except the list of lba:count "
+"pairs is read from stdin rather than being specified on the command line.  "
+"This can be used to avoid problems with excessively long command lines.  It "
+"also permits batching of many more sector ranges into single commands to the "
+"drive, up to the currently configured transfer limit (max_sectors_kb)."
+msgstr ""
+"上の B<--trim-sector-ranges> と同じ「LBA:セクタ数」の組のリストを、 "
+"コマンドラインで指定するのではなく、 "
+"標準入力から読み込む。 "
+"コマンドラインが長くなりすぎる問題を防ぐ。 "
+"設定されている転送の制限 (max_sectors_kb) の範囲内で、 "
+"はるかに多くのセクタ範囲を 1 つのコマンドでまとめて指定できる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:651
+#, no-wrap
+msgid "I<-u>"
+msgstr "I<-u>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:675
+msgid ""
+"Get/set the interrupt-unmask flag for the drive.  A setting of B<1> permits "
+"the driver to unmask other interrupts during processing of a disk interrupt, "
+"which greatly improves Linux\\'s responsiveness and eliminates \"serial port "
+"overrun\" errors.  B<Use this feature with caution:> some drive/controller "
+"combinations do not tolerate the increased I/O latencies possible when this "
+"feature is enabled, resulting in B<massive filesystem corruption.> In "
+"particular, B<CMD-640B> and B<RZ1000> (E)IDE interfaces can be B<unreliable> "
+"(due to a hardware flaw) when this option is used with kernel versions "
+"earlier than 2.0.13.  Disabling the B<IDE prefetch> feature of these "
+"interfaces (usually a BIOS/CMOS setting)  provides a safe fix for the "
+"problem for use with earlier kernels."
+msgstr ""
+"ドライブの割り込み許可フラグを取得・設定する。 "
+"B<1> に設定すると、 ディスク割り込み処理中に他の割り込みのマスクを "
+"(ドライバが) 外すことを許可する。 "
+"これは Linux の反応を大いに改善し、 \"serial port overrun\" "
+"エラーを出なくなるようにする。 "
+"あるドライブとコントローラーの組み合わせでは、 この機能を有効にしたときに "
+"I/O 遅延の増加を許容せず、 その結果 "
+"B<大量のファイルシステムの不正> を引き起こす。 "
+"よって、 B<この機能は注意して使用すること>。 "
+"特に B<CMD-640B> と B<RZ10000> (E)IDE "
+"インタフェースでは、 (ハードウェアの欠陥から) "
+"このオプションを 2.0.13 "
+"カーネル以前のバージョンで使用した場合には "
+"B<信頼できない>。 "
+"これらのインタフェースの (通常は "
+"BIOS/CMOS の設定にある)  B<IDE プリフェッチ> "
+"機能を無効にすれば、 それより前のカーネルでこの問題を安全に"
+"避けることができる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:675
+#, no-wrap
+msgid "I<-v>"
+msgstr "I<-v>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:679
+msgid ""
+"Display some basic settings, similar to -acdgkmur for IDE.  This is also the "
+"default behaviour when no options are specified."
+msgstr ""
+"基本的な設定を表示する。 IDE では -acdgkmur と同様。"
+"これはまた、 フラグが何も指定されなかった場合のデフォルト動作である。 "
+
+#. type: TP
+#: original/man8/hdparm.8:679
+#, no-wrap
+msgid "I<--verbose>"
+msgstr "I<--verbose>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:682
+msgid "Display extra diagnostics from some commands."
+msgstr "一部のコマンドについて、 より詳しい診断結果を表示する。"
+
+#. type: TP
+#: original/man8/hdparm.8:682
+#, no-wrap
+msgid "I<-w>"
+msgstr "I<-w>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:689
+msgid ""
+"Perform a device reset B<(DANGEROUS).> Do NOT use this option.  It exists "
+"for unlikely situations where a reboot might otherwise be required to get a "
+"confused drive back into a useable state."
+msgstr ""
+"デバイスのリセットを実行する B<(危険である)>。 "
+"このオプションを使用し*ない*こと。 "
+"混乱したドライブを使用可能な状態へと戻すためにリブートが必要になる"
+"ような、 あまりない有り得ない状況のために、 このオプションはある。 "
+
+#. type: TP
+#: original/man8/hdparm.8:689
+#, no-wrap
+msgid "I<--write-sector>"
+msgstr "I<--write-sector>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:695
+msgid ""
+"Writes zeros to the specified sector number.  VERY DANGEROUS.  The sector "
+"number must be given (base10) after this option.  hdparm will issue a "
+"low-level write (completely bypassing the usual block layer read/write "
+"mechanisms)  to the specified sector.  This can be used to force a drive to "
+"repair a bad sector (media error)."
+msgstr ""
+"指定された番号のセクタに連続したゼロを書き込む。 "
+"*非常に危険*。 "
+"オプションの後にセクタ番号を指定する (単位は 10)。 "
+"hdparm は指定されたセクタに、 低レベルの書き込みを発行する "
+"(完全に通常のブロックレイヤーの読み書き機構を迂回する)。 "
+"ドライブに不良セクタ (メディアエラー) の修復を強制するときに使われる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:695
+#, no-wrap
+msgid "I<-W>"
+msgstr "I<-W>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:698
+msgid ""
+msgid "Get/set the IDE/SATA drive\\'s write-caching feature."
+msgstr ""
+"IDE/SATA ドライブの書き込みキャッシュ機能を取得・設定する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:698
+#, no-wrap
+msgid "I<-X>"
+msgstr "I<-X>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:735
+msgid ""
+"Set the IDE transfer mode for (E)IDE/ATA drives.  This is typically used in "
+"combination with B<-d1> when enabling DMA to/from a drive on a supported "
+"interface chipset, where B<-X mdma2> is used to select multiword DMA mode2 "
+"transfers and B<-X sdma1> is used to select simple mode 1 DMA transfers.  "
+"With systems which support UltraDMA burst timings, B<-X udma2> is used to "
+"select UltraDMA mode2 transfers (you\\'ll need to prepare the chipset for "
+"UltraDMA beforehand).  Apart from that, use of this option is B<seldom "
+"necessary> since most/all modern IDE drives default to their fastest PIO "
+"transfer mode at power-on.  Fiddling with this can be both needless and "
+"risky.  On drives which support alternate transfer modes, B<-X> can be used "
+"to switch the mode of the drive B<only.> Prior to changing the transfer "
+"mode, the IDE interface should be jumpered or programmed (see B<-p> option)  "
+"for the new mode setting to prevent loss and/or corruption of data.  I<Use "
+"this with extreme caution!> For the PIO (Programmed Input/Output)  transfer "
+"modes used by Linux, this value is simply the desired PIO mode number plus "
+"8.  Thus, a value of 09 sets PIO mode1, 10 enables PIO mode2, and 11 selects "
+"PIO mode3.  Setting 00 restores the drive\\'s \"default\" PIO mode, and 01 "
+"disables IORDY.  For multiword DMA, the value used is the desired DMA mode "
+"number plus 32.  for UltraDMA, the value is the desired UltraDMA mode number "
+"plus 64."
+msgstr ""
+"(E)IDE/ATA ドライブの IDE 転送モードを設定する。 "
+"サポートされているインタフェースチップセットにつながったドライブの "
+"DMA を有効にする B<-d1> と共に使用するのが普通である。 "
+"その場合、 B<-X mdma2> はマルチワード DMA モード 2 "
+"転送を選択し、 B<-X sdma> はシンプルモード 1 DMA "
+"転送を選択する。 "
+"UltraDMA バースト転送をサポートしているシステムでは、 B<-X "
+"udma2> で UltraDMA mode2 転送を選択する "
+"(事前に、 チップセットを UltraDMA のために準備する必要がある)。 "
+"それはさておき、 現在のほとんど全ての IDE "
+"ドライブは、 電源投入時にデフォルトで最も速い PIO "
+"転送モードになるので、 このオプションのB<必要性はめったにない>。 "
+"これをもてあそぶことは、 不要で危険なことである。 "
+"他の転送モードをサポートするドライブでは、 B<-X> "
+"はそのドライブ B<のみ>、 転送モードを変更する。 "
+"データの喪失・不正を避けるために、 転送モードの変更する前に "
+"IDE インタフェースを新しいモードへとジャンプ、 またはプログラム "
+"(B<-p> オプションを見よ) すべきである。 "
+"I<最大限の注意をもってこのオプションを使用すること!> "
+"Linux で使用される PIO (Programmed Input/Output) "
+"転送モードでは、 この値は指定したい PIO モード番号に "
+"8 を加えたものである。 "
+"よって、 値 09 は PIO モード 1、 "
+"10 は PIO モード 2、 "
+"11 は PIO モード 3 を選択する。 "
+"設定値 00 はドライブの \"デフォルト\" PIO モードに戻し、 "
+"01 は IORDY を無効にする。 "
+"マルチモード DMA では、 指定したい DMA モード番号に 32 を足す。 "
+"UltraDMA では、 指定したい UltraDMA モード番号に 64 を足す。 "
+
+#. type: TP
+#: original/man8/hdparm.8:735
+#, no-wrap
+msgid "I<-y>"
+msgstr "I<-y>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:743
+msgid ""
+"Force an IDE drive to immediately enter the low power consumption B<standby> "
+"mode, usually causing it to spin down.  The current power mode status can be "
+"checked using the B<-C> option."
+msgstr ""
+"IDE ドライブをすぐに強制的に低消費電力の B<standby> "
+"モードにする。通常、 これはスピンダウンさせる。 "
+"現在の電力モード状態は B<-C> オプションで確認できる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:743
+#, no-wrap
+msgid "I<-Y>"
+msgstr "I<-Y>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:753
+msgid ""
+"Force an IDE drive to immediately enter the lowest power consumption "
+"B<sleep> mode, causing it to shut down completely.  A hard or soft reset is "
+"required before the drive can be accessed again (the Linux IDE driver will "
+"automatically handle issuing a reset if/when needed).  The current power "
+"mode status can be checked using the B<-C> option."
+msgstr ""
+"IDE ドライブをすぐに強制的に最低消費電力 B<スリープ> モードにする。 "
+"通常、 これは完全に停止させる。 "
+"ドライブに再びアクセスできるようにするには、 "
+"ハードリセットまたはソフトリセットが必要である (Linux の IDE "
+"ドライバは、 必要であれば自動的にリセット発行を処理する)。 "
+"現在の電力モード状態は B<-C> オプションで確認できる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:753
+#, no-wrap
+msgid "I<-z>"
+msgstr "I<-z>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:756
+msgid "Force a kernel re-read of the partition table of the specified device(s)."
+msgstr ""
+"指定したデバイス (複数可) のパーティションテーブルを、 "
+"カーネルに再読み込みさせる。 "
+
+#. type: TP
+#: original/man8/hdparm.8:761
+#, no-wrap
+msgid "I<-Z>"
+msgstr "I<-Z>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:463
+msgid ""
+"Disable the automatic power-saving function of certain Seagate drives "
+"(ST3xxx models?), to prevent them from idling/spinning-down at inconvenient "
+"times."
+msgstr ""
+"ある種の Seagate ドライブ (ST3xxx モデル?) "
+"で、 迷惑な時間でアイドル/スピンダウンしてしまうのを避けるため、 "
+"自動パワーセーブ機能を無効にする。 "
+
+#. type: SH
+#: original/man8/hdparm.8:762
+#, no-wrap
+msgid "ATA Security Feature Set"
+msgstr "ATA Security Feature Set仕様"
+
+#. type: Plain text
+#: original/man8/hdparm.8:768
+msgid ""
+"These switches are B<DANGEROUS> to experiment with, and might not work with "
+"some kernels.  B<USE AT YOUR OWN RISK.>"
+msgstr ""
+"これらのスイッチは、 試してみるには B<危険> であり、 "
+"カーネルによっては動作しない場合もある。 "
+"B<使う場合は自己責任で。> "
+
+#. type: TP
+#: original/man8/hdparm.8:768
+#, no-wrap
+msgid "I<--security-help>"
+msgstr "I<--security-help>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:771
+msgid "Display terse usage info for all of the --security-* options."
+msgstr ""
+"すべての --security-* オプションについて、 使用法を簡潔に表示する。 "
+
+#. type: TP
+#: original/man8/hdparm.8:771
+#, no-wrap
+msgid "I<--security-freeze>"
+msgstr "I<--security-freeze>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:778
+msgid ""
+"Freeze the drive\\'s security settings.  The drive does not accept any "
+"security commands until next power-on reset.  Use this function in "
+"combination with --security-unlock to protect drive from any attempt to set "
+"a new password. Can be used standalone, too.  No other options are permitted "
+"on the command line with this one."
+msgstr ""
+"デバイスのセキュリティ設定をフリーズする。 "
+"ドライブは、 "
+"次のパワーオンリセットまでセキュリティコマンドを受け付けなくなる。 "
+"--security-unlock と組み合わせて、 "
+"新しいパスワードを設定しようとする攻撃からドライブを守るのに使われる。 "
+"単独でも使われる。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:778
+#, no-wrap
+msgid "I<--security-unlock PWD>"
+msgstr "I<--security-unlock PWD>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:785
+msgid ""
+"Unlock the drive, using password PWD.  Password is given as an ASCII string "
+"and is padded with NULs to reach 32 bytes.  The applicable drive password is "
+"selected with the --user-master switch (default is \"user\" password).  No "
+"other options are permitted on the command line with this one."
+msgstr ""
+"パスワード PWD を指定してドライブをロック解除する。 "
+"パスワードは ASCII 文字列で指定する。 "
+"32 バイトに満たない場合は残りが NUL で埋められる。 "
+"適用するドライブのパスワードは、 "
+"--user-master スイッチにより選ぶ。 "
+"(デフォルトは \"ユーザー\" パスワード)。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:785
+#, no-wrap
+msgid "I<--security-set-pass PWD>"
+msgstr "I<--security-set-pass PWD>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:797
+msgid ""
+"Lock the drive, using password PWD (Set Password)  B<(DANGEROUS).> Password "
+"is given as an ASCII string and is padded with NULs to reach 32 bytes.  Use "
+"the special password B<NULL> to set an empty password.  The applicable drive "
+"password is selected with the --user-master switch (default is \"user\" "
+"password)  and the applicable security mode with the --security-mode "
+"switch.  No other options are permitted on the command line with this one."
+msgstr ""
+"パスワード PWD でドライブをロックする (パスワードを設定する) "
+"B<(危険)。> "
+"パスワードは ASCII 文字列で指定する。 "
+"32 バイトに満たない場合は残りが NUL で埋められる。 "
+"空のパスワードを設定するには、 "
+"B<NULL> という特別なパスワードを指定する。 "
+"適用するドライブのパスワードは、 "
+"--user-master スイッチにより選ぶ。 "
+"(デフォルトは \"ユーザー\" パスワード)。 "
+"適用するセキュリティモードは --security-mode スイッチにより選ぶ。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:797
+#, no-wrap
+msgid "I<--security-disable PWD>"
+msgstr "I<--security-disable PWD>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:804
+msgid ""
+"Disable drive locking, using password PWD.  Password is given as an ASCII "
+"string and is padded with NULs to reach 32 bytes.  The applicable drive "
+"password is selected with the --user-master switch (default is \"user\" "
+"password).  No other options are permitted on the command line with this "
+"one."
+msgstr ""
+"パスワード PWD を指定してドライブのロックを無効にする。 "
+"パスワードは ASCII 文字列で指定する。 "
+"32 バイトに満たない場合は残りが NUL で埋められる。 "
+"適用するドライブのパスワードは、 "
+"--user-master スイッチにより選ぶ。 "
+"(デフォルトは \"ユーザー\" パスワード)。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:804
+#, no-wrap
+msgid "I<--security-erase PWD>"
+msgstr "I<--security-erase PWD>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:815
+msgid ""
+"Erase (locked) drive, using password PWD B<(DANGEROUS).> Password is given "
+"as an ASCII string and is padded with NULs to reach 32 bytes.  Use the "
+"special password B<NULL> to represent an empty password.  The applicable "
+"drive password is selected with the --user-master switch (default is "
+"\"user\" password).  No other options are permitted on the command line with "
+"this one."
+msgstr ""
+"パスワード PWD を指定して、 "
+"(ロックされた) ドライブのセキュア消去を実行する "
+"B<(危険)。> "
+"パスワードは ASCII 文字列で指定する。 "
+"32 バイトに満たない場合は残りが NUL で埋められる。 "
+"空のパスワードを表現するには、 "
+"B<NULL> という特別なパスワードを指定する。 "
+"適用するドライブのパスワードは、 "
+"--user-master スイッチにより選ぶ。 "
+"(デフォルトは \"ユーザー\" パスワード)。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:815
+#, no-wrap
+msgid "I<--security-erase-enhanced PWD>"
+msgstr "I<--security-erase-enhanced PWD>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:823
+msgid ""
+"Enhanced erase (locked) drive, using password PWD B<(DANGEROUS).> Password "
+"is given as an ASCII string and is padded with NULs to reach 32 bytes.  The "
+"applicable drive password is selected with the --user-master switch (default "
+"is \"user\" password).  No other options are permitted on the command line "
+"with this one."
+msgstr ""
+"パスワード PWD を指定して、 "
+"(ロックされた) ドライブのエンハンスドセキュア消去を実行する "
+"B<(危険)。> "
+"パスワードは ASCII 文字列で指定する。 "
+"32 バイトに満たない場合は残りが NUL で埋められる。 "
+"適用するドライブのパスワードは、 "
+"--user-master スイッチにより選ぶ。 "
+"(デフォルトは \"ユーザー\" パスワード)。 "
+"このオプションを指定するときは、 "
+"コマンドラインでほかのオプションは指定してはならない。 "
+
+#. type: TP
+#: original/man8/hdparm.8:823
+#, no-wrap
+msgid "I<--user-master USER>"
+msgstr "I<--user-master USER>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:831
+#, no-wrap
+msgid ""
+"Specifies which password (user/master) to select.\n"
+"B<Defaults to user password.>\n"
+"Only useful in combination with --security-unlock, --security-set-pass,\n"
+"--security-disable, --security-erase or --security-erase-enhanced.\n"
+"        u       user password\n"
+"        m       master password\n"
+msgstr ""
+"ユーザー/マスターのどちらのパスワードを選ぶか指定する。\n"
+"B<デフォルトはユーザーパスワード。>\n"
+"--security-unlock、 --security-set-pass、 --security-disable、 "
+"--security-erase、 --security-erase-enhanced "
+"との組みあわせでのみ意味を持つ。\n"
+"        u       ユーザーパスワード\n"
+"        m       マスターパスワード\n"
+
+#. type: TP
+#: original/man8/hdparm.8:832
+#, no-wrap
+msgid "I<--security-mode MODE>"
+msgstr "I<--security-mode MODE>"
+
+#. type: Plain text
+#: original/man8/hdparm.8:839
+#, no-wrap
+msgid ""
+"Specifies which security mode (high/maximum) to set.\n"
+"B<Defaults to high.>\n"
+"Only useful in combination with --security-set-pass.\n"
+"        h       high security\n"
+"        m       maximum security\n"
+msgstr ""
+"高/最大のどちらのセキュリティモードを設定するか指定する。\n"
+"B<デフォルトは高。>\n"
+"--security-set-pass との組み合わせでのみ意味を持つ。\n"
+"        h       高セキュリティ\n"
+"        m       最大セキュリティ\n"
+
+#. type: Plain text
+#: original/man8/hdparm.8:841
+msgid "B<THIS FEATURE IS EXPERIMENTAL AND NOT WELL TESTED. USE AT YOUR OWN RISK.>"
+msgstr ""
+"B<この機能は実験的なもので、 十分にテストされていない。 "
+"使う場合は自己責任で。> "
+
+#. type: SH
+#: original/man8/hdparm.8:841
+#, no-wrap
+msgid "FILES"
+msgstr "ファイル"
+
+#. type: Plain text
+#: original/man8/hdparm.8:843
+msgid "/etc/hdparm.conf"
+msgstr "/etc/hdparm.conf"
+
+#. type: SH
+#: original/man8/hdparm.8:843
+#, no-wrap
+msgid "BUGS"
+msgstr "バグ"
+
+#. type: Plain text
+#: original/man8/hdparm.8:852
+msgid ""
+"As noted above, the B<-m sectcount> and B<-u 1> options should be used with "
+"caution at first, preferably on a read-only filesystem.  Most drives work "
+"well with these features, but a few drive/controller combinations are not "
+"100% compatible.  Filesystem corruption may result.  Backup everything "
+"before experimenting!"
+msgstr ""
+"前述の通り、 B<-m setcount> と B<-u 1> "
+"オプションは、 まず注意して使用する必要があり、 "
+"リードオンリーのファイルシステムで使用するのが望ましい。 "
+"これらの機能はほとんどのドライブでちゃんと動作するが、 "
+"いくつかのドライバとコントローラーの組み合わせは、 100% "
+"互換ではない。 "
+"その結果は、 ファイルシステムの不正である。 "
+"実験する前に、 すべてをバックアップしておくこと!"
+
+#. type: Plain text
+#: original/man8/hdparm.8:855
+msgid ""
+"Some options (e.g. -r for SCSI) may not work with old kernels as necessary "
+"ioctl()\\'s were not supported."
+msgstr ""
+"古いカーネルでは、 必要な ioctl() "
+"がサポートされていないために、 いくつかのオプション "
+"(例えば SCSI での -r) は動作しない。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:859
+msgid ""
+"Although this utility is intended primarily for use with SATA/IDE hard disk "
+"devices, several of the options are also valid (and permitted) for use with "
+"SCSI hard disk devices and MFM/RLL hard disks with XT interfaces."
+msgstr ""
+"このユーティリティは主に SATA/IDE "
+"ハードディスクデバイスでの使用を意図してはいるが、 "
+"いくつかのオプションは SCSI "
+"ハードディスクデバイス および XT インタフェース上の "
+"MFM/RLL ハードディスクでも有効である。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:865
+msgid ""
+"The Linux kernel up until 2.6.12 (and probably later) doesn\\'t handle the "
+"security unlock and disable commands gracefully and will segfault and in "
+"some cases even panic. The security commands however might indeed have been "
+"executed by the drive. This poor kernel behaviour makes the PIO data "
+"security commands rather useless at the moment."
+msgstr ""
+"Linux カーネルの 2.6.12 まで (そしておそらくそれ以降も) "
+"はセキュリティロックとロック解除のコマンドをきれいに扱えず、 "
+"セグメンテーション違反や、 場合によってはパニックを起こす。 "
+"しかし実際には、セキュリティコマンドはドライブで実行される必要がある。 "
+"カーネルのこの残念な挙動は、 "
+"現時点ではむしろ PIO data のセキュリティコマンドを無用なものとする。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:872
+msgid ""
+"Note that the \"security erase\" and \"security disable\" commands have been "
+"implemented as two consecutive PIO data commands and will not succeed on a "
+"locked drive because the second command will not be issued after the "
+"segfault.  See the code for hints how patch it to work around this "
+"problem. Despite the segfault it is often still possible to run two "
+"instances of hdparm consecutively and issue the two necessary commands that "
+"way."
+msgstr ""
+"\"security erase\" と \"security disable\" のコマンドは "
+"2 つの連続した PIO data のコマンドとして実装されており、 "
+"2 つ目のコマンドはセグメンテーション違反の後には発行されないため、 "
+"成功しない場合があることに注意。 "
+"ヒントとして、 この問題を回避するためにどのようにパッチを当てているか、 "
+"コードを参照のこと。 "
+"2 つの hdparm のインスタンスを連続して起動し、 "
+"2 つの必要なコマンドをこのように発行するのは、 "
+"セグメンテーション違反にもかかわらず、 "
+"しばしば可能である。 "
+
+#. type: SH
+#: original/man8/hdparm.8:872
+#, no-wrap
+msgid "AUTHOR"
+msgstr "著者"
+
+#. type: Plain text
+#: original/man8/hdparm.8:877
+msgid ""
+"B<hdparm> has been written by Mark Lord E<lt>mlord@pobox.comE<gt>, the "
+"original primary developer and maintainer of the (E)IDE driver for Linux, "
+"and current contributer to the libata subsystem, along with suggestions and "
+"patches from many netfolk."
+msgstr ""
+"B<hdparm> は、 Linux の (E)IDE "
+"ドライバの最初の主要開発者、 かつメンテナーであり、 "
+"現在 libata サブシステムのコントリビュータである "
+"Mark Lord E<lt>mlord@pobox.comE<gt> によって書かれ、 "
+"ネット上の多くの「家族」から多くの提案を受けた。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:880
+msgid ""
+"The disable Seagate auto-powersaving code is courtesy of Tomi "
+"Leppikangas(tomilepp@paju.oulu.fi)."
+msgstr ""
+"Seagate の自動パワーセーブを無効にするコードは Tomi "
+"Leppikangas (tomilepp@paju.oulu.fi) の好意によるものである。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:882
+msgid "Security freeze command by Benjamin Benz, 2005."
+msgstr ""
+"Security freeze コマンドは Benjamin Benz による (2005 年)。 "
+
+#. type: Plain text
+#: original/man8/hdparm.8:885
+msgid ""
+"PIO data out security commands by Leonard den Ottolander, 2005.  Some other "
+"parts by Benjamin Benz and others."
+msgstr ""
+"PIO data out のセキュリティコマンドは "
+"Leonard den Ottolander による (2005 年)。 "
+"ほかのパーツは Benjamin Benz やそのほかの人たちによる。 "
+
+#. type: SH
+#: original/man8/hdparm.8:885
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "関連項目"
+
+#. type: Plain text
+#: original/man8/hdparm.8:888
+msgid ""
+"B<http://www.t13.org/> Technical Committee T13 AT Attachment (ATA/ATAPI) "
+"Interface."
+msgstr ""
+"B<http://www.t13.org/> Technical Committee T13 AT Attachment (ATA/ATAPI) "
+"Interface."
+
+#. type: Plain text
+#: original/man8/hdparm.8:891
+msgid "B<http://www.serialata.org/> Serial ATA International Organization."
+msgstr "B<http://www.serialata.org/> Serial ATA International Organization."
+
+#. type: Plain text
+#: original/man8/hdparm.8:893
+msgid "B<http://www.compactflash.org/> CompactFlash Association."
+msgstr "B<http://www.compactflash.org/> CompactFlash Association."
